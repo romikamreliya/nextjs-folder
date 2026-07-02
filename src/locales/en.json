@@ -1,0 +1,239 @@
+{
+  "common": {
+    "app": {
+      "name": "App Template",
+      "tagline": "Application Starter Template"
+    },
+    "actions": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "view": "View",
+      "search": "Search",
+      "filter": "Filter",
+      "export": "Export",
+      "remove": "Remove",
+      "close": "Close",
+      "confirm": "Confirm",
+      "back": "Back",
+      "backToList": "Back to List",
+      "actions": "Actions",
+      "next": "Next",
+      "prev": "Previous"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "pending": "Pending",
+      "suspended": "Suspended",
+      "loading": "Loading...",
+      "comingSoon": "{{feature}} feature is coming soon!"
+    },
+    "values": {
+      "yes": "Yes",
+      "no": "No",
+      "disabled": "Disabled"
+    },
+    "table": {
+      "search": "Search...",
+      "noData": "No data found.",
+      "columns": "Table Columns",
+      "rows": "Rows : {{count}}",
+      "showing": "{{from}} to {{to}} of {{total}} results",
+      "noMatchingRecords": "No matching records",
+      "tryDifferentKeyword": "Try a different keyword or clear the current search.",
+      "clearSearch": "Clear search",
+      "escToClear": "Press ESC to clear"
+    },
+    "pagination": {
+      "prev": "Prev",
+      "next": "Next"
+    },
+    "support": {
+      "needHelp": "Need Help?",
+      "description": "Our support team is ready to assist you.",
+      "contactButton": "Contact Support"
+    },
+    "profile": {
+      "profile": "Profile",
+      "settings": "Settings",
+      "logout": "Log Out"
+    },
+    "topbar": {
+      "search": "Search anything...",
+      "notifications": "Notifications",
+      "settings": "Settings",
+      "company": "Company",
+      "switchCompany": "Switch Company",
+      "country": "Company Country",
+      "switchCountry": "Select Company Country"
+    },
+    "toast": {
+      "success": "Success",
+      "error": "Error occurred",
+      "info": "Info",
+      "warning": "Warning"
+    },
+    "language": {
+      "switchLabel": "Language"
+    },
+    "documents": {
+      "sectionTitle": "Documents",
+      "sectionDescription": "Attach supporting documents (PDF, images). Max 10 MB each.",
+      "existing": "Attached Documents",
+      "toUpload": "{{count}} file(s) ready to upload",
+      "noDocuments": "No documents attached.",
+      "dragDrop": "Drag & drop files here, or click to browse",
+      "dropHere": "Drop files here!",
+      "acceptedFormats": "Accepted: PDF, JPG, PNG, WEBP — Max 10 MB each",
+      "view": "View document",
+      "remove": "Remove document",
+      "restore": "Undo removal",
+      "markedForRemoval": "Will be removed",
+      "invalidType": "Invalid file type. Please upload PDF, JPG, PNG, or WEBP.",
+      "tooLarge": "File exceeds {{mb}} MB limit.",
+      "fields": {
+        "documentType": "Document Type",
+        "documentTypePlaceholder": "Select document type",
+        "documentName": "Document Name",
+        "documentNamePlaceholder": "e.g. Trade License Certificate",
+        "documentNumber": "Document Number",
+        "documentNumberPlaceholder": "e.g. TL-2024-001",
+        "remarks": "Remarks",
+        "remarksPlaceholder": "Optional notes about this document",
+        "issueDate": "Issue Date",
+        "expiryDate": "Expiry Date",
+        "notifyBeforeDays": "Notify Before (Days)",
+        "notifyBeforeDaysPlaceholder": "e.g. 30"
+      },
+      "previewPdfFallback": "PDF preview is not supported by your browser.",
+      "openInNewTab": "Open in new tab",
+      "previewNotAvailable": "Preview is not available for this file type."
+    },
+    "notFound": {
+      "badge": "Error 404",
+      "titleLine1": "Page",
+      "titleLine2": "Not Found.",
+      "description": "The warehouse shelf you're looking for is empty. This page doesn't exist or may have been moved to another location.",
+      "descriptionAuth": "The warehouse shelf you're looking for is empty. This route doesn't exist or you may not have the required access permissions.",
+      "goBack": "Go Back",
+      "dashboard": "Dashboard",
+      "login": "Login",
+      "quickLinks": "Quick Links",
+      "pageMissing": "Page Missing",
+      "statusLabel": "App Template · Status 404"
+    }
+  },
+  "sidebar": {
+    "sections": {
+      "menu": "Menu",
+      "quickNav": "Quick Navigation"
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "analytics": "Analytics",
+      "demoTable": "Demo Table",
+      "componentShowcase": "UI Showcase"
+    },
+    "searchModules": "Search modules..."
+  },
+  "dashboard": {
+    "page": {
+      "title": "Dashboard",
+      "comingSoon": "More features coming soon"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "subtitle": "Welcome back! Please enter your credentials to continue.",
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email address"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your password"
+      },
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot Password",
+      "submit": "Sign In",
+      "success": "Login successful!",
+      "error": "Login failed. Please try again."
+    },
+    "hero": {
+      "badge": "App Template",
+      "brand": "App",
+      "heading": "Welcome Back",
+      "subtitle": "Streamline your business workflow with <span class=\"text-white font-semibold\">real-time management and analytics</span>.",
+      "card": {
+        "title": "Smart Business Insights",
+        "description": "Access real-time analytics, track key metrics, and make data-driven decisions effortlessly."
+      }
+    }
+  },
+  "validation": {
+    "login": {
+      "email": {
+        "required": "Email address is required",
+        "invalid": "Please enter a valid email address"
+      },
+      "password": {
+        "required": "Password is required",
+        "min": "Password must be at least 6 characters",
+        "max": "Password is too long"
+      }
+    },
+    "user": {
+      "name": {
+        "required": "Name is required",
+        "min": "Name must be at least 2 characters",
+        "max": "Name must be less than 255 characters"
+      },
+      "email": {
+        "required": "Email is required",
+        "invalid": "Invalid email address"
+      },
+      "phone": {
+        "invalid": "Invalid format. Must be like +91 9876543210 (max 20 digits)"
+      },
+      "password": {
+        "required": "Password is required",
+        "min": "Password must be at least 8 characters",
+        "max": "Password is too long",
+        "pattern": "Must include A-Z, a-z, 0-9 & symbol"
+      },
+      "image": {
+        "size": "Image size must be less than 5MB",
+        "type": "Only JPG and PNG images are allowed"
+      },
+      "roles": {
+        "min": "At least one role is required",
+        "unique": "Duplicate role assignments are not allowed",
+        "duplicate": "This role assignment already exists"
+      },
+      "role": {
+        "required": "Role is required"
+      },
+      "scope": {
+        "required": "Please select a scope"
+      },
+      "org": {
+        "required": "Please select an organization"
+      }
+    },
+    "role": {
+      "name": {
+        "required": "Role name is required",
+        "min": "Role name must be at least 2 characters",
+        "max": "Role name must be less than 255 characters"
+      },
+      "description": {
+        "max": "Description must be less than 1000 characters"
+      }
+    }
+  }
+}

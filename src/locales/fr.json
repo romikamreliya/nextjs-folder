@@ -1,0 +1,238 @@
+{
+  "common": {
+    "app": {
+      "name": "Modèle d'App",
+      "tagline": "Modèle de démarrage d'application"
+    },
+    "actions": {
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "submit": "Soumettre",
+      "add": "Ajouter",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "view": "Voir",
+      "search": "Rechercher",
+      "filter": "Filtrer",
+      "export": "Exporter",
+      "remove": "Retirer",
+      "close": "Fermer",
+      "confirm": "Confirmer",
+      "back": "Retour",
+      "backToList": "Retour à la liste",
+      "actions": "Actions",
+      "next": "Suivant",
+      "prev": "Précédent"
+    },
+    "status": {
+      "active": "Actif",
+      "inactive": "Inactif",
+      "pending": "En attente",
+      "suspended": "Suspendu",
+      "loading": "Chargement...",
+      "comingSoon": "La fonctionnalité {{feature}} arrive bientôt !"
+    },
+    "values": {
+      "yes": "Oui",
+      "no": "Non",
+      "disabled": "Désactivé"
+    },
+    "table": {
+      "search": "Rechercher...",
+      "noData": "Aucune donnée trouvée.",
+      "columns": "Colonnes du tableau",
+      "rows": "Lignes : {{count}}",
+      "showing": "{{from}} à {{to}} sur {{total}} résultats",
+      "noMatchingRecords": "Aucun enregistrement correspondant",
+      "tryDifferentKeyword": "Essayez un autre mot-clé ou effacez la recherche actuelle.",
+      "clearSearch": "Effacer la recherche",
+      "escToClear": "Appuyez sur ÉCHAP pour effacer"
+    },
+    "pagination": {
+      "prev": "Précédent",
+      "next": "Suivant"
+    },
+    "support": {
+      "needHelp": "Besoin d'aide ?",
+      "description": "Notre équipe d'assistance est prête à vous aider.",
+      "contactButton": "Contacter le support"
+    },
+    "profile": {
+      "profile": "Profil",
+      "settings": "Paramètres",
+      "logout": "Se déconnecter"
+    },
+    "topbar": {
+      "search": "Rechercher n'importe quoi...",
+      "notifications": "Notifications",
+      "settings": "Paramètres",
+      "company": "Entreprise",
+      "switchCompany": "Changer d'entreprise",
+      "country": "Pays de l'entreprise",
+      "switchCountry": "Sélectionner le pays de l'entreprise"
+    },
+    "toast": {
+      "success": "Succès",
+      "error": "Une erreur s'est produite",
+      "info": "Info",
+      "warning": "Avertissement"
+    },
+    "language": {
+      "switchLabel": "Langue"
+    },
+    "documents": {
+      "sectionTitle": "Documents",
+      "sectionDescription": "Joindre des documents justificatifs (PDF, images). Max 10 Mo chacun.",
+      "existing": "Documents joints",
+      "toUpload": "{{count}} fichier(s) prêt(s) à envoyer",
+      "noDocuments": "Aucun document joint.",
+      "dragDrop": "Glisser-déposer les fichiers ici ou cliquer pour parcourir",
+      "dropHere": "Déposez les fichiers ici !",
+      "acceptedFormats": "Acceptés : PDF, JPG, PNG, WEBP — Max 10 Mo chacun",
+      "view": "Voir le document",
+      "remove": "Supprimer le document",
+      "restore": "Annuler la suppression",
+      "markedForRemoval": "Sera supprimé",
+      "invalidType": "Type de fichier invalide. Veuillez charger un PDF, JPG, PNG ou WEBP.",
+      "tooLarge": "Le fichier dépasse la limite de {{mb}} Mo.",
+      "fields": {
+        "documentType": "Type de document",
+        "documentTypePlaceholder": "Sélectionner le type de document",
+        "documentName": "Nom du document",
+        "documentNamePlaceholder": "ex. Certificat de licence commerciale",
+        "documentNumber": "Numéro de document",
+        "documentNumberPlaceholder": "ex. TL-2024-001",
+        "remarks": "Remarques",
+        "remarksPlaceholder": "Notes facultatives sur ce document",
+        "issueDate": "Date d'émission",
+        "expiryDate": "Date d'expiration",
+        "notifyBeforeDays": "Notifier avant (jours)",
+        "notifyBeforeDaysPlaceholder": "ex. 30"
+      },
+      "previewPdfFallback": "L'aperçu PDF n'est pas pris en charge par votre navigateur.",
+      "openInNewTab": "Ouvrir dans un nouvel onglet",
+      "previewNotAvailable": "L'aperçu n'est pas disponible pour ce type de fichier."
+    },
+    "notFound": {
+      "badge": "Erreur 404",
+      "titleLine1": "Page",
+      "titleLine2": "Introuvable.",
+      "description": "L'étagère d'entrepôt que vous cherchez est vide. Cette page n'existe pas ou a peut-être été déplacée.",
+      "descriptionAuth": "L'étagère que vous cherchez est vide. Cette route n'existe pas ou vous n'avez pas les autorisations requises.",
+      "goBack": "Retour",
+      "dashboard": "Tableau de bord",
+      "login": "Connexion",
+      "quickLinks": "Liens rapides",
+      "pageMissing": "Page manquante",
+      "statusLabel": "Modèle d'App · Statut 404"
+    }
+  },
+  "sidebar": {
+    "sections": {
+      "menu": "Menu",
+      "quickNav": "Navigation rapide"
+    },
+    "nav": {
+      "dashboard": "Tableau de bord",
+      "analytics": "Analytique",
+      "demoTable": "Tableau Démo",
+      "componentShowcase": "Vitrine UI"
+    },
+    "searchModules": "Rechercher des modules..."
+  },
+  "dashboard": {
+    "page": {
+      "title": "Tableau de bord",
+      "comingSoon": "D'autres fonctionnalités arrivent bientôt"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Se connecter",
+      "subtitle": "Bon retour ! Veuillez entrer vos identifiants pour continuer.",
+      "email": {
+        "label": "Adresse e-mail",
+        "placeholder": "Entrez votre adresse e-mail"
+      },
+      "password": {
+        "label": "Mot de passe",
+        "placeholder": "Entrez votre mot de passe"
+      },
+      "rememberMe": "Se souvenir de moi",
+      "forgotPassword": "Mot de passe oublié",
+      "submit": "Se connecter",
+      "success": "Connexion réussie !",
+      "error": "Échec de la connexion. Veuillez réessayer."
+    },
+    "hero": {
+      "badge": "Modèle d'App",
+      "heading": "Bon retour",
+      "subtitle": "Optimisez votre flux de travail avec <span class=\"text-white font-semibold\">une gestion et des analyses en temps réel</span>.",
+      "card": {
+        "title": "Informations intelligentes sur l'entreprise",
+        "description": "Accédez à des analyses en temps réel, suivez les indicateurs clés et prenez des décisions basées sur les données sans effort."
+      }
+    }
+  },
+  "validation": {
+    "login": {
+      "email": {
+        "required": "L'adresse e-mail est requise",
+        "invalid": "Veuillez entrer une adresse e-mail valide"
+      },
+      "password": {
+        "required": "Le mot de passe est requis",
+        "min": "Le mot de passe doit comporter au moins 6 caractères",
+        "max": "Le mot de passe est trop long"
+      }
+    },
+    "user": {
+      "name": {
+        "required": "Le nom est requis",
+        "min": "Le nom doit comporter au moins 2 caractères",
+        "max": "Le nom doit comporter moins de 255 caractères"
+      },
+      "email": {
+        "required": "L'e-mail est requis",
+        "invalid": "Adresse e-mail invalide"
+      },
+      "phone": {
+        "invalid": "Format invalide. Doit être comme +91 9876543210 (max 20 chiffres)"
+      },
+      "password": {
+        "required": "Le mot de passe est requis",
+        "min": "Le mot de passe doit comporter au moins 8 caractères",
+        "max": "Le mot de passe est trop long",
+        "pattern": "Le mot de passe doit contenir des majuscules, minuscules, chiffres et caractères spéciaux"
+      },
+      "image": {
+        "size": "La taille de l'image doit être inférieure à 5MB",
+        "type": "Seules les images JPG et PNG sont autorisées"
+      },
+      "roles": {
+        "min": "Au moins un rôle est requis",
+        "unique": "Les attributions de rôles en double ne sont pas autorisées",
+        "duplicate": "Cette attribution de rôle existe déjà"
+      },
+      "role": {
+        "required": "Le rôle est requis"
+      },
+      "scope": {
+        "required": "Veuillez sélectionner une portée"
+      },
+      "org": {
+        "required": "Veuillez sélectionner une organisation"
+      }
+    },
+    "role": {
+      "name": {
+        "required": "Le nom du rôle est requis",
+        "min": "Le nom du rôle doit comporter au moins 2 caractères",
+        "max": "Le nom du rôle doit comporter moins de 255 caractères"
+      },
+      "description": {
+        "max": "La description doit comporter moins de 1000 caractères"
+      }
+    }
+  }
+}

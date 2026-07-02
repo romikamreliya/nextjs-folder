@@ -1,0 +1,510 @@
+@import "tailwindcss";
+@import "@heroui/styles"; 
+
+@theme {
+    /* =========================
+       BASE COLORS
+    ========================= */
+   --color-bg: #f4f4f5;
+   --color-surface: #ffffff;
+
+    --color-text: #111827;
+    --color-text-primary: #0a0a0a;
+   --color-text-secondary: #71717a;
+   --color-text-muted: #a1a1aa;
+
+    --color-white: #ffffff;
+    --color-black: #0a0a0a;
+
+    /* =========================
+       BUTTON COLORS
+    ========================= */
+   --color-btn-primary: #18181b;
+   --color-btn-primary-hover: #27272a;
+    --color-btn-primary-active: #0a0a0a;
+    --color-btn-primary-text: #ffffff;
+
+    --color-btn-secondary: #ffffff;
+   --color-btn-secondary-hover: #fafafa;
+    --color-btn-secondary-text: #111827;
+    --color-btn-secondary-border: #d1d5db;
+
+    /* =========================
+       CARD / PANEL COLORS
+    ========================= */
+    --color-card-bg: #ffffff;
+    --color-card-text: #111827;
+   --color-card-border: #e4e4e7;
+
+   --color-panel-bg: #18181b;
+   --color-panel-card-bg: #27272a;
+   --color-panel-text: #d4d4d8;
+
+    /* =========================
+       CARD / PANEL COLORS
+    ========================= */
+   --color-border: #e4e4e7;
+   --color-border-light: #f4f4f5;
+   --color-border-dark: #d4d4d8;
+
+   --color-divider: #d4d4d8;
+
+    /* =========================
+       FORM ELEMENT COLORS (Input, Checkbox, Radio, Select, etc.)
+    ========================= */
+    --color-input-bg: #ffffff;
+    --color-input-text: #111827;
+   --color-input-placeholder: #a1a1aa;
+   --color-input-border: #d4d4d8;
+    --color-input-focus: #111827;
+
+    --color-checkbox-bg: #ffffff;
+   --color-checkbox-border: #a1a1aa;
+   --color-checkbox-border-dark: #d4d4d8;
+    --color-checkbox-checked: #111827;
+
+    --color-radio-bg: #ffffff;
+   --color-radio-border: #a1a1aa;
+    --color-radio-checked: #111827;
+
+    --color-select-bg: #ffffff;
+   --color-select-border: #d4d4d8;
+    --color-select-text: #111827;
+
+    /* =========================
+       STATE COLORS
+    ========================= */
+   --color-hover: #fafafa;
+   --color-active: #e4e4e7;
+   --color-disabled: #a1a1aa;
+
+    --color-success: #16a34a;
+    --color-warning: #f59e0b;
+    --color-danger: #dc2626;
+    --color-info: #2563eb;
+
+    /* =========================
+       SHADOWS
+    ========================= */
+    --shadow-xs: 0 1px 1px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.10);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.12);
+
+    /* =========================
+       BORDER RADIUS
+    ========================= */
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 18px;
+    --radius-full: 9999px;
+
+    /* =========================
+       LAYOUT
+    ========================= */
+    --layout-header-height: 64px;
+    --layout-sidebar-width: 260px;
+    --layout-container-width: 1440px;
+
+    --layout-content-padding: 24px;
+    --layout-card-padding: 20px;
+
+    /* =========================
+       TRANSITIONS
+    ========================= */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 350ms ease;
+
+    /* =========================
+       SVG ICON COLORS
+    ========================= */
+    --icon-primary: #111827;
+    --icon-secondary: #111827;
+
+    /* =========================
+       EXTENDED SURFACE COLORS
+    ========================= */
+   --color-surface-subtle: #f5f5f5;
+   --color-surface-hover: #ebebec;
+   --color-border-subtle: #ececef;
+   --color-bg-subtle: #fafafa;
+
+    /* =========================
+       ACCENT COLORS
+    ========================= */
+   --color-accent: #18181b;
+   --color-accent-light: #f4f4f5;
+   --color-accent-text: #18181b;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@utility animate-fade-in-up {
+    animation: fade-in-up 0.35s ease forwards;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+@utility animate-fade-in {
+    animation: fade-in 0.2s ease forwards;
+}
+
+@utility card-premium {
+    border: 1px solid var(--color-card-border);
+    box-shadow: var(--shadow-sm);
+}
+
+@utility no-scrollbar {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+*, *::before, *::after {
+   font-family: var(--font-nunito), var(--font-nunito-sans), sans-serif;
+   box-sizing: border-box;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff00 inset !important;
+    -webkit-text-fill-color: #000 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+:root {
+   color-scheme: light;
+   --theme-transition-x: calc(100vw - 36px);
+   --theme-transition-y: 36px;
+   --theme-transition-radius: 150vmax;
+}
+
+html,
+body {
+   background:
+      radial-gradient(circle at 12% -18%, rgba(24, 24, 27, 0.06), transparent 36%),
+      radial-gradient(circle at 84% -26%, rgba(39, 39, 42, 0.05), transparent 42%),
+      var(--color-bg);
+   color: var(--color-text);
+   transition: background-color 220ms ease, color 220ms ease;
+}
+
+html.dark {
+   color-scheme: dark;
+
+   --color-bg: #09090b;
+   --color-surface: #121215;
+
+   --color-text: #e4e4e7;
+   --color-text-primary: #fafafa;
+   --color-text-secondary: #b5b5bf;
+   --color-text-muted: #8d8d98;
+
+   --color-btn-primary: #2a2a31;
+   --color-btn-primary-hover: #363640;
+   --color-btn-primary-active: #454550;
+   --color-btn-primary-text: #fafafa;
+
+   --color-btn-secondary: #151519;
+   --color-btn-secondary-hover: #202026;
+   --color-btn-secondary-text: #f4f4f5;
+   --color-btn-secondary-border: #3d3d46;
+
+   --color-card-bg: #121215;
+   --color-card-text: #f4f4f5;
+   --color-card-border: #34343a;
+
+   --color-panel-bg: #09090b;
+   --color-panel-card-bg: #141417;
+   --color-panel-text: #d4d4d8;
+
+   --color-border: #333339;
+   --color-border-light: #232329;
+   --color-border-dark: #484851;
+   --color-divider: #3c3c44;
+
+   --color-input-bg: #17171b;
+   --color-input-text: #f4f4f5;
+   --color-input-placeholder: #8d8d98;
+   --color-input-border: #44444d;
+   --color-input-focus: #f4f4f5;
+
+   --color-checkbox-bg: #18181b;
+   --color-checkbox-border: #52525b;
+   --color-checkbox-border-dark: #52525b;
+   --color-checkbox-checked: #f4f4f5;
+
+   --color-radio-bg: #18181b;
+   --color-radio-border: #52525b;
+   --color-radio-checked: #f4f4f5;
+
+   --color-select-bg: #17171b;
+   --color-select-border: #44444d;
+   --color-select-text: #f4f4f5;
+
+   --color-hover: #222228;
+   --color-active: #24242a;
+   --color-disabled: #71717a;
+
+   --color-surface-subtle: #1a1a1f;
+   --color-surface-hover: #24242b;
+   --color-border-subtle: #3a3a42;
+   --color-bg-subtle: #0e0e10;
+
+   --color-accent: #f4f4f5;
+   --color-accent-light: #1d1d22;
+   --color-accent-text: #fafafa;
+
+   --icon-primary: #f4f4f5;
+   --icon-secondary: #a1a1aa;
+}
+
+html.dark,
+html.dark body {
+   background:
+      radial-gradient(circle at 8% -18%, rgba(255, 255, 255, 0.06), transparent 34%),
+      radial-gradient(circle at 90% -18%, rgba(161, 161, 170, 0.08), transparent 38%),
+      var(--color-bg);
+}
+
+html.dark input:-webkit-autofill,
+html.dark input:-webkit-autofill:hover,
+html.dark input:-webkit-autofill:focus,
+html.dark input:-webkit-autofill:active {
+   -webkit-box-shadow: 0 0 0 1000px #121215 inset !important;
+   -webkit-text-fill-color: #f4f4f5 !important;
+}
+
+@keyframes theme-toggle-entry {
+   from {
+      opacity: 0;
+      transform: translateX(14px) scale(0.96);
+   }
+   to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+   }
+}
+
+@keyframes theme-page-reveal {
+   from {
+      clip-path: circle(28px at var(--theme-transition-x) var(--theme-transition-y));
+      filter: brightness(1.02);
+   }
+   to {
+      clip-path: circle(var(--theme-transition-radius) at var(--theme-transition-x) var(--theme-transition-y));
+      filter: brightness(1);
+   }
+}
+
+@keyframes theme-page-shrink {
+   from {
+      clip-path: circle(var(--theme-transition-radius) at var(--theme-transition-x) var(--theme-transition-y));
+      filter: brightness(1);
+   }
+   to {
+      clip-path: circle(28px at var(--theme-transition-x) var(--theme-transition-y));
+      filter: brightness(1.02);
+   }
+}
+
+@keyframes theme-page-hold {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+.theme-toggle-entry {
+   animation: theme-toggle-entry 260ms ease-out;
+}
+
+.theme-toggle-button {
+   align-items: center;
+   justify-content: center;
+   border: 0;
+   background: transparent;
+   padding: 0;
+   cursor: pointer;
+   line-height: 0;
+}
+
+.theme-toggle-button:focus-visible {
+   outline: 2px solid var(--color-text-secondary);
+   outline-offset: 2px;
+   border-radius: 9999px;
+}
+
+.theme-toggle-track {
+   position: relative;
+   display: inline-flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 56px;
+   height: 30px;
+   border-radius: 9999px;
+   border: 1px solid var(--color-border);
+   background: linear-gradient(140deg, #f8fafc 0%, #e2e8f0 100%);
+   padding: 0 8px;
+   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), var(--shadow-xs);
+   transition: border-color 280ms ease, box-shadow 280ms ease;
+}
+
+/* Pseudo-element overlay for smooth background gradient transition */
+.theme-toggle-track::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   border-radius: inherit;
+   background: linear-gradient(140deg, #17171b 0%, #0f1012 100%);
+   opacity: 0;
+   transition: opacity 280ms ease;
+   z-index: 1;
+}
+
+.theme-toggle-track.is-dark::before {
+   opacity: 1;
+}
+
+.theme-toggle-track.is-dark {
+   border-color: #3a3a40;
+   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.45);
+}
+
+.theme-toggle-thumb {
+   position: absolute;
+   top: 3px;
+   left: 3px;
+   width: 22px;
+   height: 22px;
+   border-radius: 9999px;
+   background: #ffffff;
+   box-shadow: 0 4px 10px rgba(15, 23, 42, 0.22);
+   transform: translateX(26px);
+   transition: transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1), background-color 220ms ease;
+   z-index: 2;
+}
+.module-table-section .checkbox__content {
+   display: none;
+}
+.theme-toggle-thumb.is-dark {
+   background: #f4f4f5;
+   transform: translateX(0);
+}
+
+.theme-toggle-icon {
+   width: 14px;
+   height: 14px;
+   z-index: 2;
+   transition: opacity 280ms ease, transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1);
+   overflow: visible;
+   flex-shrink: 0;
+}
+
+.theme-toggle-icon.sun {
+   color: #f59e0b;
+}
+
+.theme-toggle-icon.sun.is-hidden {
+   opacity: 0;
+   transform: scale(0.6) rotate(-90deg);
+}
+
+.theme-toggle-icon.moon {
+   color: #d4d4d8;
+}
+
+.theme-toggle-icon.moon.is-hidden {
+   opacity: 0;
+   transform: scale(0.6) rotate(90deg);
+}
+
+/* Smooth global theme transition helper */
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+   transition: background-color 350ms ease, border-color 350ms ease, color 350ms ease, fill 350ms ease, stroke 350ms ease, box-shadow 350ms ease !important;
+   transition-delay: 0s !important;
+}
+
+@supports (view-transition-name: root) {
+   :root {
+      view-transition-name: root;
+   }
+
+   html.theme-page-transition::view-transition-group(root) {
+      animation-duration: 1200ms;
+   }
+
+   html.theme-page-transition::view-transition-old(root),
+   html.theme-page-transition::view-transition-new(root) {
+      animation-duration: 1200ms;
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+   html.theme-page-transition-to-dark::view-transition-old(root) {
+      z-index: 1;
+      animation-name: theme-page-hold;
+   }
+
+   html.theme-page-transition-to-dark::view-transition-new(root) {
+      z-index: 2;
+      animation-name: theme-page-reveal;
+   }
+
+   html.theme-page-transition-to-light::view-transition-old(root) {
+      z-index: 2;
+      animation-name: theme-page-shrink;
+   }
+
+   html.theme-page-transition-to-light::view-transition-new(root) {
+      z-index: 1;
+      animation-name: theme-page-hold;
+   }
+
+   html.theme-page-transition-to-light::view-transition-new(root) {
+      filter: drop-shadow(0 0 36px rgba(255, 255, 255, 0.82));
+   }
+
+   html.theme-page-transition-to-dark::view-transition-new(root) {
+      filter: drop-shadow(0 0 28px rgba(0, 0, 0, 0.52));
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   html.theme-page-transition::view-transition-old(root),
+   html.theme-page-transition::view-transition-new(root) {
+      animation: none !important;
+      filter: none !important;
+   }
+}
