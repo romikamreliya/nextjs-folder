@@ -17,27 +17,7 @@ import { parseDate } from "@internationalized/date";
 import { AltArrowDown } from "@/components/icon/icons";
 import { useForm, useFieldArray, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-
-// ─── Yup schema for each staged document entry ──────────────────────────────
-const docEntrySchema = yup.object({
-  documentTypeId: yup.string().required("Document type is required"),
-  documentName: yup.string().required("Document name is required").min(2, "Min 2 chars"),
-  documentNumber: yup.string().optional(),
-  remarks: yup.string().optional(),
-  issueDate: yup.string().optional(),
-  expiryDate: yup.string().optional(),
-  notifyBeforeDays: yup
-    .number()
-    .transform((v, o) => (o === "" ? undefined : v))
-    .optional()
-    .min(0, "Must be ≥ 0")
-    .nullable(),
-});
-
-const stagingSchema = yup.object({
-  docs: yup.array().of(docEntrySchema),
-});
+import { stagingSchema } from "@/schema/document.schema";
 
 /**
  * DocumentUploadSection — Reusable document upload/management panel

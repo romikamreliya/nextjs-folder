@@ -24,11 +24,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 
-// ── Inline Login Schema (moved from deleted user.schema.js) ──────────────────
-const loginSchema = Yup.object({
-    email: Yup.string().trim().email("Invalid email").required("Email is required"),
-    password: Yup.string().required("Password is required"),
-});
+import { loginSchema } from "@/schema/login.schema";
 
 const ERP_ANIM = `
   @keyframes erp-truck {

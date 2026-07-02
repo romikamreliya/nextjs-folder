@@ -11,6 +11,7 @@ import AppConfirmModal from "@/components/ui/confirmModal";
 import AppDeleteModal from "@/components/ui/deleteModal";
 import AppDrawer from "@/components/ui/drawer";
 import AppToast from "@/components/ui/toast";
+import DemoForm from "@/components/form/demo-form";
 import { Globe, Users, ShieldUser, Sparkles, Box, Check, Copy } from "@/components/icon/icons";
 
 export default function ComponentShowcasePage() {
@@ -346,6 +347,57 @@ import AppSwitch from "@/components/ui/switch";
             </div>
           </div>
 
+        </div>
+      </div>
+
+      {/* ── Section: Validation Form ── */}
+      <div>
+        <h2 className="text-xl font-bold text-(--color-text-primary) mb-4 border-b border-border-subtle pb-2">
+          Validation Forms (React Hook Form & Yup)
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+          <DemoForm />
+          
+          <div className="flex flex-col bg-(--color-surface) border border-border-subtle rounded-2xl p-6 shadow-xs h-full">
+            <h3 className="font-semibold text-lg text-(--color-text-primary) mb-1">Form Pattern Explanation</h3>
+            <p className="text-xs text-(--color-text-muted) mb-4">
+              Our core input components (`AppInput`, `AppSections`, `AppCheckbox`) seamlessly integrate with `react-hook-form` and validation resolvers like `yup`.
+            </p>
+            <div className="text-xs text-text-secondary space-y-3 leading-relaxed border-t border-zinc-100 dark:border-zinc-800 pt-4 flex-1">
+              <p>
+                <strong>Key Principles:</strong>
+              </p>
+              <ul className="list-disc pl-4 space-y-1">
+                <li>Provide the <code>register</code> prop from <code>useForm()</code> directly to the inputs.</li>
+                <li>Pass the <code>errors</code> object to let components automatically display validation errors inline.</li>
+                <li>Write robust schemas using Yup to enforce field boundaries, formats (emails, numbers), and constraints.</li>
+              </ul>
+            </div>
+            
+            <div className="mt-4 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+              <details className="group">
+                <summary className="text-xs font-semibold text-indigo-500 cursor-pointer list-none flex items-center justify-between hover:underline">
+                  <span>View Setup Snippet</span>
+                  <span className="transition-transform group-open:rotate-180">▼</span>
+                </summary>
+                <div className="relative mt-2">
+                  <button 
+                    onClick={() => copyToClipboard(`const { register, handleSubmit, formState: { errors } } = useForm({\n  resolver: yupResolver(schema)\n});\n\n<AppInput name="name" register={register} errors={errors} />`, "formsetup")}
+                    className="absolute right-2 top-2 p-1.5 rounded-lg border border-border-subtle bg-surface-hover hover:bg-surface-active"
+                  >
+                    {copiedId === "formsetup" ? <Check className="size-3.5 text-emerald-500" /> : <Copy className="size-3.5" />}
+                  </button>
+                  <pre className="bg-zinc-950 text-zinc-200 text-xs p-4 rounded-xl overflow-x-auto font-mono mt-2">
+                    {`const { register, handleSubmit, formState: { errors } } = useForm({
+  resolver: yupResolver(schema)
+});
+
+<AppInput name="name" register={register} errors={errors} />`}
+                  </pre>
+                </div>
+              </details>
+            </div>
+          </div>
         </div>
       </div>
 
