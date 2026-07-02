@@ -55,10 +55,16 @@ The project uses Tailwind CSS v4. Colors, border radius, spacing, shadows, and t
   - `card-premium`: Simple light border with a subtle shadow (`box-shadow: var(--shadow-sm)`).
   - `animate-fade-in-up`: Clean sliding fade-in animation for page layouts and modal entries.
   - `no-scrollbar`: Utility to hide default browser scrollbars.
+- **Interactive Micro-Animations**:
+  - **Sidebar navigation items**: Slight translate-x (4px) slide and icon scaling zoom-in on hover, and custom fade-in state borders.
+  - **StatsCards**: Floating elevation lift (translate-y -4px), drop shadow updates, and linear gradient glows expanding on hover.
+  - **Forms (Buttons/Inputs/Dropdowns)**: Button scale-down press effects (`active:scale-[0.98]`), and inputs/triggers focused soft glow outlines (`ring-4 ring-zinc-950/5`).
+  - **Table Rows**: Color hover transitions (`duration-150`) for interactive scanning.
 
 ### Dark Mode
 - Dark mode is managed by appending the `.dark` class to the `html` element.
 - Transition state changes (`color`, `background-color`) smoothly using standard transitions.
+
 
 ---
 

@@ -66,13 +66,14 @@ export default function AppInput({
             <InputGroup
                 className={`
                     w-full h-12 rounded-lg border bg-(--color-input-bg) shadow-(--shadow-sm)
-                    transition-all
+                    transition-all duration-200
                     border-(--color-input-border)
                     hover:border-(--color-border-dark)
                     focus-within:border-(--color-input-focus)
-                    focus-within:ring-1
-                    focus-within:ring-(--color-input-focus)
-                    ${errorMessage ? "border-(--color-danger)" : ""}
+                    focus-within:ring-4
+                    focus-within:ring-zinc-950/5
+                    dark:focus-within:ring-zinc-100/5
+                    ${errorMessage ? "border-(--color-danger) focus-within:ring-red-500/10" : ""}
                 `}
             >
                 {

@@ -67,14 +67,14 @@ export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
           }
         }}
         href={item.href}
-        className={` relative flex items-center gap-3 px-4 py-2.5 rounded-(--radius-lg) transition-colors font-medium text-sm ${
+        className={`group relative flex items-center gap-3 px-4 py-2.5 rounded-(--radius-lg) transition-all duration-200 font-medium text-sm hover:translate-x-1 ${
           isActive
-            ? "bg-(--color-bg) text-(--color-text-primary)"
+            ? "bg-(--color-bg) text-(--color-text-primary) shadow-(--shadow-xs)"
             : "text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-hover)"
         }`}
       >
-        {isActive && <div className=" absolute left-0 top-1/2 h-5 w-0.75 -translate-y-1/2 rounded-r bg-linear-to-b from-(--color-text-primary) to-text-secondary"/>}
-        <item.icon className={`w-5 h-5 ${isActive ? "text-(--color-text-primary)" : ""}`} />
+        {isActive && <div className=" absolute left-0 top-1/2 h-5 w-0.75 -translate-y-1/2 rounded-r bg-linear-to-b from-(--color-text-primary) to-text-secondary animate-fade-in"/>}
+        <item.icon className={`w-5 h-5 transition-transform duration-200 group-hover:scale-110 ${isActive ? "text-(--color-text-primary)" : ""}`} />
         {t(item.titleKey)}
       </NextLink>
     );

@@ -327,7 +327,13 @@ const AppTable = ({
               )}
             >
               {(loading ? [] : items).map((item, index) => (
-                <TableRow key={item.id ?? index} className={rowClassName?.(item) || undefined}>
+                <TableRow 
+                  key={item.id ?? index} 
+                  className={cn(
+                    "transition-all duration-150 hover:bg-zinc-50 dark:hover:bg-zinc-900/30 cursor-default",
+                    rowClassName?.(item)
+                  )}
+                >
                   {displayedHeaderColumns.map((col) => (
                     <TableCell key={col.key}>{renderCell(item, col.key)}</TableCell>
                   ))}

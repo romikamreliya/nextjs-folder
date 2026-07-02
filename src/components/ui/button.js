@@ -69,10 +69,11 @@ export default function AppButton({
                 rounded-lg
                 font-semibold
                 flex items-center justify-center gap-2
-                transition-colors duration-200
+                transition-all duration-200
+                active:scale-[0.98]
                 ${fullWidth ? "w-full" : ""}
                 ${variantClasses[variant]}
-                ${disabled || loading ? "cursor-not-allowed opacity-60" : ""}
+                ${disabled || loading ? "cursor-not-allowed opacity-60 pointer-events-none active:scale-100" : ""}
                 ${className}
             `}
         >
